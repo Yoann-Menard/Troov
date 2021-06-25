@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const cors = require('cors');
 const PORT = '6300';
 require('dotenv/config');
 
 const usersRoute = require('./routes/users');
 
+app.use(cors());
 app.use(express.json());
 app.use(
   express.urlencoded({
@@ -26,5 +28,5 @@ mongoose.connect(
 );
 
 app.listen(PORT, () => {
-  console.log(`Serveur démarré : http://localhost:${PORT}`);
+  console.log(`Serveur démarrer : http://localhost:${PORT}`);
 });
