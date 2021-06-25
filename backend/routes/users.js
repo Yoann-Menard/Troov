@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
+const bcrypt = require('bcryptjs');
 const { registerValidation, loginValidation } = require('../validation');
+
 router.get('/', async (req, res) => {
   try {
     const users = await User.find().limit(15);
@@ -24,10 +26,13 @@ router.post('/register', async (req, res) => {
   const { error } = registerValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(req.body.password, salt);
+
   const user = new User({
     username: req.body.username,
     email: req.body.email,
-    password: req.body.password,
+    password: hashedPassword,
   });
   try {
     const savedUser = await user.save();
