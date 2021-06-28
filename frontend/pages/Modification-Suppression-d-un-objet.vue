@@ -1,5 +1,5 @@
 <template>
-  <Interface />
+  <Modification-Suppression-d-un-objet />
 </template>
 
 <script>

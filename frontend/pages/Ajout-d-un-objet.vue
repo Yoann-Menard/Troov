@@ -1,5 +1,5 @@
 <template>
-  <Interface />
+  <Ajout-d-un-objet />
 </template>
 
 <script>

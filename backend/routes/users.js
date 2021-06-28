@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const { registerValidation, loginValidation } = require('../validation');
 
 router.get('/', async (req, res) => {
@@ -34,6 +35,7 @@ router.post('/register', async (req, res) => {
     email: req.body.email,
     password: hashedPassword,
   });
+
   try {
     const savedUser = await user.save();
     res.json(savedUser);
@@ -42,19 +44,16 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// router.post('/login', async (req, res) => {
-//     const user = new User({
-//       username: req.body.username,
-//       email: req.body.email,
-//       password: req.body.password,
-//     });
-//     try {
-//       const savedUser = await user.save();
-//       res.json(savedUser);
-//     } catch (err) {
-//       res.json({ message: err });
-//     }
-//   });
+router.post('/login', async (req, res) => {
+  const { error } = loginValidation(req.body);
+  if (error) return res.status(400).send(error.details[0].message);
+
+  const validPass = await bcrypt.compare(req.body.password, user.password);
+  if (!validPass) return res.status(400).send('Le mot de passe est invalide');
+
+  const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
+  res.header('auth-token', token).send(token);
+});
 
 router.patch('/:userId', async (req, res) => {
   try {

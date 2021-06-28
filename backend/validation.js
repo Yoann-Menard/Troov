@@ -22,7 +22,6 @@ const registerValidation = (data) => {
 
 const loginValidation = (data) => {
   const schema = Joi.object({
-    username: Joi.string().alphanum().min(6).max(255).required(),
     email: Joi.string()
       .min(6)
       .max(255)

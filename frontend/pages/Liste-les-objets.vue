@@ -1,5 +1,5 @@
 <template>
-  <Interface />
+  <Liste-les-objets />
 </template>
 
 <script>
