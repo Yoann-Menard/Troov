@@ -2,12 +2,10 @@
   <div class="card">
     <img
       class="image"
-      :src="require(`@/assets/images/${card.image || '1.jpg'}`)"
-      alt="L'image d'un livre JavaScript"
-    >
-    <h3 class="header">
-      {{ card.title }}
-    </h3>
+      :src="require(`@/assets/images/${card.image || 'fe1.jpg'}`)"
+      alt=""
+    />
+    <h3 class="header">{{ card.title }}</h3>
     <p class="description">
       {{ card.description }}
     </p>

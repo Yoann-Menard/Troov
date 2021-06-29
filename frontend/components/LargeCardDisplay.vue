@@ -6,7 +6,6 @@
     <p class="description">
       {{ cardsSection.description }}
     </p>
-
     <div class="cards-container">
       <LargeCard
         v-for="card in cardsSection.cards"
