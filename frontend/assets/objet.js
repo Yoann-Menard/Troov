@@ -3,7 +3,7 @@ export const largeCardSections = [
     id: 1,
     title: 'Les meilleurs livres JavaScript',
     description: 'Une compilation des meilleurs livres JavaScript.',
-    books: [
+    cards: [
       {
         id: 19,
         title: 'Eloquent JavaScript, Third Edition',

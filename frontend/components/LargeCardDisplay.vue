@@ -1,24 +1,23 @@
 <template>
   <div class="container">
     <h4 class="header">
-        {{ cardsSection.title }}
+      {{ cardsSection.title }}
     </h4>
     <p class="description">
-        {{ cardsSection.description }}
+      {{ cardsSection.description }}
     </p>
 
     <div class="cards-container">
-      <Large-card
-      v-for="card in cardsSection.cards"
-      :key="card.id"
-      :card="card"
+      <LargeCard
+        v-for="card in cardsSection.cards"
+        :key="card.image"
+        :card="card"
       />
     </div>
   </div>
 </template>
 
 <script>
-import LargeCard from './LargeCard.vue'
 export default {
   props: ['cardsSection']
 }

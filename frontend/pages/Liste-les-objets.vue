@@ -1,7 +1,16 @@
 <template>
-  <Liste-les-objets />
+  <div class="container">
+    <Liste-les-objets />
+  </div>
 </template>
 
 <script>
-export default {};
+import { largeCardSections } from '@/assets/objet.js'
+export default {
+  data () {
+    return {
+      largeCardInfo: largeCardSections
+    }
+  }
+}
 </script>

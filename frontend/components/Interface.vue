@@ -5,23 +5,34 @@
         Troov Test Technique
       </h1>
       <p class="snippet">
-        réaliser une application web contenant une interface simple qui permet l'authentification et la gestion simple d'un objet.
+        réaliser une application web contenant une interface simple qui permet
+        l'authentification et la gestion simple d'un objet.
       </p>
       <div class="button-container ">
         <div class="button-add-container">
-          <button class="button add btn">Ajouter un Objet</button>
+          <NuxtLink to="/Ajout-d-un-objet">
+            <button class="button add btn">Ajouter un Objet</button>
+          </NuxtLink>
         </div>
         <div class="button-list-container">
-          <button class="button list btn">Lister les objets</button>
+          <NuxtLink to="/Liste-les-objets">
+            <button class="button list btn">Lister les objets</button>
+          </NuxtLink>
         </div>
         <div class="button-edit-remove-container">
-          <button class="button edit-remove btn">
-            Modifier / Supprimer un objet
-          </button>
+          <NuxtLink to="/Modification-Suppression-d-un-objet">
+            <button class="button edit-remove btn">
+              Modifier / Supprimer un objet
+            </button>
+          </NuxtLink>
         </div>
       </div>
     </div>
-    <img src="~/assets/images/LOGO-TROOV-1.png" class="image" alt="Le logo de Troov" />
+    <img
+      src="~/assets/images/LOGO-TROOV-1.png"
+      class="image"
+      alt="Le logo de Troov"
+    />
   </div>
 </template>
 
@@ -90,7 +101,7 @@ export default {}
 }
 
 .edit-remove {
-    padding: 1rem 4rem;
+  padding: 1rem 2rem;
   border-radius: 100rem;
   background-color: rgb(255, 37, 8);
   color: white;
