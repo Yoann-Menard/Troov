@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <Liste-les-objets />
+    <LargeCardDisplay
+    v-for="cardInfo in largeCardInfo"
+    :key="cardInfo.id"
+    :cardsSection="cardInfo"
+    />
   </div>
 </template>
 
