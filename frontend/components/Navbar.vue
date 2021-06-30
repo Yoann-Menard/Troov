@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark padding">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary padding">
     <NuxtLink
     class="navbar-brand"
     to="/">Interface</NuxtLink>
