@@ -1,5 +1,5 @@
 <template>
-  <Inscription />
+  <Modification-Suppression-d-un-objet />
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <Inscription />
+  <Ajout-d-un-objet />
 </template>
 
 <script>
