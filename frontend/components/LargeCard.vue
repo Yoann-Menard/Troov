@@ -6,8 +6,8 @@
       alt=""
     />
     <h3 class="header">{{ card.title }}</h3>
-    <p class="description">
-      {{ card.subtitle }}
+    <p class="author">
+      {{ card.author}}
     </p>
   </div>
 </template>
