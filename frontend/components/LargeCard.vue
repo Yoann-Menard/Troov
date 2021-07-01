@@ -4,10 +4,11 @@
       class="image"
       :src="require(`@/assets/images/${card.image || '1.jpg'}`)"
       alt=""
-    />
-    <h3 class="header">{{ card.title }}</h3>
+    >
+    <h3 class="header">{{ card.title }}
+    </h3>
     <p class="author">
-      {{ card.author}}
+      {{ card.author }}
     </p>
   </div>
 </template>
