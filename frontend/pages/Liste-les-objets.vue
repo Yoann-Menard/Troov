@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <LargeCardDisplay
-    v-for="cardInfo in largeCardInfo"
-    :key="cardInfo.id"
-    :cardsSection="cardInfo"
+      v-for="cardInfo in largeCardInfo"
+      :key="cardInfo.id"
+      :cards-section="cardInfo"
     />
   </div>
 </template>
