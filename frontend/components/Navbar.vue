@@ -1,8 +1,11 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary padding">
     <NuxtLink
-    class="navbar-brand"
-    to="/">Interface</NuxtLink>
+      class="navbar-brand"
+      to="/"
+    >
+      Interface
+    </NuxtLink>
     <button
       class="navbar-toggler"
       type="button"
@@ -12,24 +15,26 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"/>
     </button>
 
-    <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+    <div id="navbarSupportedContent" class="collapse navbar-collapse ml-auto">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
           <NuxtLink
-          to="/Connexion"
-          class="nav-link"
-            >Connexion <span class="sr-only">(current)</span></NuxtLink
+            to="/Connexion"
+            class="nav-link"
           >
+            Connexion <span class="sr-only">(current)</span>
+          </NuxtLink>
         </li>
         <li class="nav-item active">
           <NuxtLink
-          to="/Inscription"
-          class="nav-link"
-            >S'inscrire <span class="sr-only">(current)</span></NuxtLink
+            to="/Inscription"
+            class="nav-link"
           >
+            S'inscrire <span class="sr-only">(current)</span>
+          </NuxtLink>
         </li>
       </ul>
     </div>

@@ -9,30 +9,28 @@
         l'authentification et la gestion simple d'un objet.
       </p>
       <div class="button-container ">
-        <div class="button-add-container">
-          <NuxtLink to="/Ajout-d-un-objet">
-            <button class="button add btn">Ajouter un Objet</button>
-          </NuxtLink>
-        </div>
         <div class="button-list-container">
-          <NuxtLink to="/Liste-les-objets">
-            <button class="button list btn">Lister les objets</button>
-          </NuxtLink>
-        </div>
-        <div class="button-edit-remove-container">
-          <NuxtLink to="/Modification-Suppression-d-un-objet">
-            <button class="button edit-remove btn">
-              Modifier / Supprimer un objet
+          <NuxtLink to="/users">
+            <button class="button list btn">
+              Liste des Utilisateurs
             </button>
           </NuxtLink>
         </div>
+      </div>
+
+      <div class="dead-list">
+        <NuxtLink to="/Liste-les-objets">
+          <button class="button dead-list-btn">
+            Ancienne liste d'objets (Obsolète!)
+          </button>
+        </NuxtLink>
       </div>
     </div>
     <img
       src="~/assets/images/LOGO-TROOV-1.png"
       class="image"
       alt="Le logo de Troov"
-    />
+    >
   </div>
 </template>
 
@@ -80,15 +78,6 @@ export default {}
   align-items: flex-start;
   justify-content: space-between;
 }
-.add {
-  padding: 1rem 4rem;
-  border-radius: 100rem;
-  background-color: rgb(9, 252, 78);
-  color: white;
-  width: 20rem;
-  font-weight: 700;
-  transition: 0.5s;
-}
 
 .list {
   padding: 1rem 4rem;
@@ -100,10 +89,10 @@ export default {}
   transition: 0.5s;
 }
 
-.edit-remove {
-  padding: 1rem 2rem;
+.dead-list-btn{
+  padding: 0.1rem 1rem;
   border-radius: 100rem;
-  background-color: rgb(255, 37, 8);
+  background-color: rgb(255, 5, 5);
   color: white;
   width: 20rem;
   font-weight: 700;
